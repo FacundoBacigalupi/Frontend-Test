@@ -588,16 +588,20 @@ video {
   }
 }
 
-.ml-2 {
-  margin-left: 0.5rem;
+.m-4 {
+  margin: 1rem;
 }
 
-.ml-3 {
-  margin-left: 0.75rem;
+.m-5 {
+  margin: 1.25rem;
 }
 
-.ml-4 {
-  margin-left: 1rem;
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.h-96 {
+  height: 24rem;
 }
 
 .text-3xl {
@@ -607,11 +611,6 @@ video {
 
 .font-bold {
   font-weight: 700;
-}
-
-.text-neutral-600 {
-  --tw-text-opacity: 1;
-  color: rgb(82 82 82 / var(--tw-text-opacity));
 }
 
 .underline {
