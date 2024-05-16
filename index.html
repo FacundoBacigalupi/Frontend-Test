@@ -3,54 +3,70 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-            />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
         <link href="./output.css" rel="stylesheet">
     </head>
-    <body class="container h-full w-full">
-        <div class="container shadow fixed z-50">
-            <div class="container h-6 bg-light-green flex align-center justify-center">
+    <body class="container">
+        <div class="container shadow fixed z-10 min-w-full">
+            <div class="container h-6 bg-light-green flex align-center justify-center min-w-full">
                 <p class="text-white text-xsm h-min mx-0 my-auto">
                     30% Off All Orders Until 4/27
                 </p>
             </div>
-            <div class="container flex justify-center py-5 bg-white">
-                <div class="text-md-selected text-light-green ms-auto mr-4 underline underline-offset-4 cursor-pointer">Home</div>
-                <div class="text-md text-light-green mx-4 cursor-pointer">Item 1</div>
-                <div class="text-md text-light-green mx-4 cursor-pointer">Item 2</div>
-                <div class="text-md text-light-green mx-4 cursor-pointer">Item 3</div>
-                <div class="text-md text-light-green mx-4 cursor-pointer">Item 4</div>
-                <div class="text-md text-light-green ml-4 me-auto cursor-pointer">Item 5</div>
-                <p id="total" class="min-w-16 max-w-16 overflow-hidden">0.00$</p>
+            <div class="container flex justify-start py-5 bg-white min-w-full">
+                <nav role="navigation" class="md:hidden">
+                    <div id="menuToggle">
+                        <input type="checkbox" />
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <ul id="menu">
+                        <a href="#"><li>Home</li></a>
+                        <a href="#"><li>Item 1</li></a>
+                        <a href="#"><li>Item 2</li></a>
+                        <a href="#"><li>Item 3</li></a>
+                        <a href="#"><li>Item 4</li></a>
+                        <a href="#"><li>Item 5</li></a>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="hidden md:block text-md-selected text-light-green ms-auto mr-4 underline underline-offset-4 cursor-pointer">Home</div>
+                <div class="hidden md:block text-md text-light-green mx-4 cursor-pointer">Item 1</div>
+                <div class="hidden md:block text-md text-light-green mx-4 cursor-pointer">Item 2</div>
+                <div class="hidden md:block text-md text-light-green mx-4 cursor-pointer">Item 3</div>
+                <div class="hidden md:block text-md text-light-green mx-4 cursor-pointer">Item 4</div>
+                <div class="hidden md:block text-md text-light-green ml-4 me-auto cursor-pointer">Item 5</div>
+                <p id="total" class="min-w-16 max-w-16 overflow-hidden ms-auto md:ms-0">0.00$</p>
                 <button class="me-6 cursor-pointer" id="myBtn">🛒</button>
             </div>
         </div>
         
-        <div class="container flex justify-center w-screen">
-            <div class="swiper w-full mx-auto">
-                <div class="swiper-wrapper mx-auto w-full">
-                    <div class="swiper-slide bg-hero bg-no-repeat bg-cover mx-auto w-full">
-                        <div class="container flex align-center justify-center my-32">
-                            <div class="m-auto w-1/2">
-                                <div class="container w-3/4">
-                                    <h1 class="text-xlg text-light-green">Lorem ipsum dolor sit amet</h1>
-                                    <p class="text-md text-light-green">Nunc porttitor tortor metus, nec sagittis lectus accumsan quis. Aenean euismod mollis tempor.</p>
+        <div class="container min-w-full">
+            <div class="swiper min-w-full mx-auto">
+                <div class="swiper-wrapper min-w-full mx-auto">
+                    <div class="swiper-slide bg-hero bg-no-repeat bg-cover mx-auto min-w-full">
+                        <div class="container my-32 min-w-full lg:flex lg:justify-center">
+                            <div class="m-auto max-w-56 md:max-w-96 lg:max-w-96">
+                                <img class="rounded-lg" src="/img/face-4.png" alt="">
+                            </div>
+                            <div class="mx-auto mt-4 w-1/2">
+                                <div class="container w-3/4 flex flex-col mx-auto md:ml-7">
+                                    <h1 class="text-title-md text-light-green w-fit md:text-xlg md:w-96">Lorem ipsum dolor sit amet</h1>
+                                    <p class="hidden lg:block text-md text-light-green">Nunc porttitor tortor metus, nec sagittis lectus accumsan quis. Aenean euismod mollis tempor.</p>
                                 </div>
                                 
-                                <div class="container flex flex-row my-3 w-3/4">
-                                    <button class="border-2 border-light-green bg-light-green rounded-2xl w-1/2 flex py-5 justify-center mx-2">
-                                        <p class="text-white text-sm mx-5 my-auto text-nowrap">SHOP NOW</p>
-                                        <img class="mx-5 my-auto" width="16px" src="img/arrow-2-white.png" alt="">
+                                <div class="container my-3 w-44 mx-auto md:w-fit md:flex md:justify-center lg:justify-start lg:mx-0">
+                                    <button class="min-w-40 border-2 border-light-green bg-light-green rounded-2xl w-1/2 py-5 flex justify-center mx-2 my-3">
+                                        <p class="text-white text-sm mx-5 md:mx-2 my-auto text-nowrap">SHOP NOW</p>
+                                        <img class="ms-auto mx-2 md:mx-2" width="16px" src="img/arrow-2-white.png" alt="">
                                     </button>
-                                    <button class="border-2 border-light-green rounded-2xl px-10 w-1/2 flex justify-center mx-2">
+                                    <button class="min-w-40 border-2 border-light-green rounded-2xl px-10 md:px-0 w-1/2 py-5 flex justify-center mx-2 my-3">
                                         <p class="text-light-green text-sm mx-5 my-auto text-nowrap">TAKE THE QUIZ</p>
-                                        <img class="mx-5 my-auto" width="16px" src="img/arrow-2-light-green.png" alt="">
+                                        <img class="ms-auto mx-2 md:mx-2" width="16px" src="img/arrow-2-light-green.png" alt="">
                                     </button>
                                 </div>
 
-                                <div class="swiper-nav-wrapper container flex justify-start">
+                                <div class="swiper-nav-wrapper container flex justify-center lg:justify-start">
                                     <div class="border-2 border-light-green rounded-2xl w-16 h-12 mx-2" style="position: relative;">
                                         <div class="swiper-button-prev mx-2"></div>
                                     </div>
@@ -59,34 +75,31 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="m-auto">
-                                <img class="rounded-lg" width="512px" src="/img/face-4.png" alt="">
-                            </div>
                         </div>
                     </div>
-                    <div class="swiper-slide bg-hero bg-no-repeat bg-cover">
-                        <div class="container flex align-center justify-center my-32">
-                            <div class="m-auto">
+                    <div class="swiper-slide bg-hero bg-no-repeat bg-cover mx-auto min-w-full">
+                        <div class="container my-32 min-w-full lg:flex lg:justify-center">
+                            <div class="m-auto max-w-56 md:max-w-72 lg:max-w-96">
                                 <img class="rounded-lg" width="512px" src="/img/face-5.png" alt="">
                             </div>
-                            <div class="m-auto w-1/2">
-                                <div class="container w-3/4 float-right">
-                                    <h1 class="text-xlg text-light-green">Nam quis tincidunt magna</h1>
-                                    <p class="text-md text-light-green">Morbi ultrices lacinia mi, nec faucibus turpis convallis commodo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae,</p>
+                            <div class="mx-auto mt-4 w-1/2">
+                                <div class="container w-3/4 flex flex-col mx-auto md:ml-7">
+                                    <h1 class="text-title-md text-light-green w-fit md:text-xlg md:w-96">Nam quis tincidunt magna</h1>
+                                    <p class="hidden lg:block text-md text-light-green">Morbi ultrices lacinia mi, nec faucibus turpis convallis commodo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae,</p>
                                 </div>
                                 
-                                <div class="container flex flex-row my-3 w-3/4 float-right">
-                                    <button class="border-2 border-light-green bg-light-green rounded-2xl w-1/2 flex py-5 justify-center mx-2">
-                                        <p class="text-white text-sm mx-5 my-auto text-nowrap">SHOP NOW</p>
-                                        <img class="mx-5 my-auto" width="16px" src="img/arrow-2-white.png" alt="">
+                                <div class="container my-3 w-44 mx-auto md:w-fit md:flex md:justify-center lg:justify-start lg:mx-0">
+                                    <button class="min-w-40 border-2 border-light-green bg-light-green rounded-2xl w-1/2 py-5 flex justify-center mx-2 my-3">
+                                        <p class="text-white text-sm mx-5 md:mx-2 my-auto text-nowrap">SHOP NOW</p>
+                                        <img class="ms-auto mx-2 md:mx-2" width="16px" src="img/arrow-2-white.png" alt="">
                                     </button>
-                                    <button class="border-2 border-light-green rounded-2xl px-10 w-1/2 flex justify-center mx-2">
+                                    <button class="min-w-40 border-2 border-light-green rounded-2xl px-10 md:px-0 w-1/2 py-5 flex justify-center mx-2 my-3">
                                         <p class="text-light-green text-sm mx-5 my-auto text-nowrap">TAKE THE QUIZ</p>
-                                        <img class="mx-5 my-auto" width="16px" src="img/arrow-2-light-green.png" alt="">
+                                        <img class="ms-auto mx-2 md:mx-2" width="16px" src="img/arrow-2-light-green.png" alt="">
                                     </button>
                                 </div>
 
-                                <div class="swiper-nav-wrapper container flex justify-end">
+                                <div class="swiper-nav-wrapper container flex justify-start">
                                     <div class="border-2 border-light-green rounded-2xl w-16 h-12 mx-2" style="position: relative;">
                                         <div class="swiper-button-prev mx-2"></div>
                                     </div>
@@ -97,30 +110,30 @@
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide bg-hero bg-no-repeat bg-cover">
-                        <div class="container flex align-center justify-center my-32">
-                            <div class="m-auto">
+                    <div class="swiper-slide bg-hero bg-no-repeat bg-cover mx-auto min-w-full">
+                        <div class="container my-32 min-w-full lg:flex lg:justify-center">
+                            <div class="m-auto max-w-56 md:max-w-72 lg:max-w-96">
                                 <img class="rounded-lg" width="512px" src="/img/face-3.png" alt="">
                             </div>
-                            <div class="m-auto w-1/2">
-                                <div class="container w-3/4">
-                                    <h1 class="text-xlg text-light-green">Suspendisse eget ullamcorper tortor</h1>
-                                    <p class="text-md text-light-green"> Quisque dignissim consequat lorem, ac vehicula augue. Suspendisse potenti. Pellentesque congue est ac nibh euismod varius.</p>
+                            <div class="mx-auto mt-4 w-1/2">
+                                <div class="container w-3/4 flex flex-col mx-auto md:ml-7">
+                                    <h1 class="text-title-md text-light-green w-fit md:text-xlg md:w-96">Suspendisse eget ullamcorper tortor</h1>
+                                    <p class="hidden lg:block text-md text-light-green"> Quisque dignissim consequat lorem, ac vehicula augue. Suspendisse potenti. Pellentesque congue est ac nibh euismod varius.</p>
                                 </div>
                                 
-                                <div class="container flex flex-row my-3 w-3/4">
-                                    <button class="border-2 border-light-green bg-light-green rounded-2xl w-1/2 flex py-5 justify-center mx-2">
-                                        <p class="text-white text-sm mx-5 my-auto text-nowrap">SHOP NOW</p>
-                                        <img class="mx-5 my-auto" width="16px" src="img/arrow-2-white.png" alt="">
+                                <div class="container my-3 w-44 mx-auto md:w-fit md:flex md:justify-center lg:justify-start lg:mx-0">
+                                    <button class="min-w-40 border-2 border-light-green bg-light-green rounded-2xl w-1/2 py-5 flex justify-center mx-2 my-3">
+                                        <p class="text-white text-sm mx-5 md:mx-2 my-auto text-nowrap">SHOP NOW</p>
+                                        <img class="ms-auto mx-2 md:mx-2" width="16px" src="img/arrow-2-white.png" alt="">
                                     </button>
-                                    <button class="border-2 border-light-green rounded-2xl px-10 w-1/2 flex justify-center mx-2">
+                                    <button class="min-w-40 border-2 border-light-green rounded-2xl px-10 md:px-0 w-1/2 py-5 flex justify-center mx-2 my-3">
                                         <p class="text-light-green text-sm mx-5 my-auto text-nowrap">TAKE THE QUIZ</p>
-                                        <img class="mx-5 my-auto" width="16px" src="img/arrow-2-light-green.png" alt="">
+                                        <img class="ms-auto mx-2 md:mx-2" width="16px" src="img/arrow-2-light-green.png" alt="">
                                     </button>
                                 </div>
 
                                 <div class="swiper-nav-wrapper container flex justify-start">
-                                    <div class="border-2 border-light-green rounded-2xl w-16 h-12 mx-2 " style="position: relative;">
+                                    <div class="border-2 border-light-green rounded-2xl w-16 h-12 mx-2" style="position: relative;">
                                         <div class="swiper-button-prev mx-2"></div>
                                     </div>
                                     <div class="border-2 border-light-green bg-light-green rounded-2xl w-16 h-12 mx-2" style="position: relative;">
@@ -132,12 +145,12 @@
                     </div>
                 </div>
             </div>
-    </div>
+        </div>
 
-        <div class="container my-10 flex-col align-middle justify-center">
+        <div class="container my-10 flex-col align-middle justify-center min-w-full">
             <div class="container w-3/4 mx-auto">
                 <h1 class="text-lg text-light-green w-min text-nowrap mx-auto my-3">Featured Collection</h1>
-                <div class="container grid grid-rows-2 grid-flow-col gap-4 w-full my-5">
+                <div class="container grid grid-rows-7 md:grid-rows-4 lg:grid-rows-2 grid-flow-col gap-4 w-full my-5">
                     <div id="item-1" class="card px-2 my-4 shadow-xl rounded-lg">
                         <img class="h-5/6 mx-auto" src="img/face-4.png" alt="">
                         <div class="container flex justify-start mt-2 mb-2">
@@ -191,8 +204,8 @@
             </div>
         </div>
 
-        <div id="myModal" class="modal">
-            <div class="modal-content">
+        <div id="myModal" class="modal z-20">
+            <div class="modal-content md:w-3/5 lg:w-1/2">
                 <div class="bg-light-green flex justify-start">
                     <h1 class="text-white text-md my-auto ml-5">Shopping Cart</h1>
                     <span class="close ms-auto mr-5 text-white">&times;</span>

@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./index.html'],
+  content: ['./index.html', './modal.js'],
   theme: {
     colors: {
       transparent: 'transparent',
@@ -24,6 +24,10 @@ module.exports = {
       }],
       'md-selected': ['16px', {
         lineHeight: '19.36px',
+        fontWeight: '700'
+      }],
+      'title-md': ['22px', {
+        lineHeight: '30px',
         fontWeight: '700'
       }],
       'lg': [ '34px', {
